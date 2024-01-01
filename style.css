@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --fetch-red:rgb(167, 0, 0);
+
+    --ff-barlow: "Barlow";
+    --ff-montserrat: "Montserrat";
+    --ff-poppins: "Poppins";
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--ff-poppins);
+}
+
+main{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(26, 26, 65);
+    color: white;
+}
+.container{
+    width: min(80vw, 700px);
+    
+}
+form{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    position: relative;
+    background-color: white;
+    padding: clamp(1rem, 3vw,1.5rem);
+    border-radius: 4rem;
+}
+img,
+input{
+    width: 100%;
+}
+input{
+    box-sizing: border-box;
+    padding: clamp(0.2rem, 2vw, 0.5rem) 1rem;
+    border-radius: 40px;
+    border: 1px solid black;
+    outline: none;
+}
+.location-error-mssg{
+    color: red;
+    font-style: italic;
+    font-size: clamp(0.5rem, 1.5vw ,0.7rem );
+    position: absolute;
+    bottom: 0.2rem;
+    left: clamp(1.8rem,5vw,2.5rem);
+    display: none;
+}
+input,
+.fetch{
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    border-radius: 40px;
+}
+.fetch{
+    padding: clamp(0.2rem, 2vw, 0.5rem) clamp(1rem, 4vw,2rem);
+    border: 2px solid var(--fetch-red);
+    background-color: var(--fetch-red) ;
+    color: white;   
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+.fetch:hover{
+    background-color: transparent;
+    color: var(--fetch-red);
+}
+.weather-data-container{
+    width: 100%;
+    grid-template-columns: 1fr max-content;
+    display: none;
+}
+.content-container{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container{
+    width: 100px;
+}
+.temp-icon-container{
+    display: flex;
+    align-items: center;
+}
+.temperature-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.temp{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--ff-barlow);
+}
+.text{
+    font-size: clamp(0.6rem, 2vw ,0.8rem );
+    text-align: center;
+    padding: 0rem 0.5rem;
+}
+.location-container{
+    text-align: right;
+    font-size: clamp(0.6rem, 2vw ,0.8rem );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aqi-container{
+    grid-column: 1/span2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0rem;
+    text-align: center;
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+}
+.aqi-container p{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    padding-bottom: 0.5rem;
+}

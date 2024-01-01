@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <form action="">
+                <input required id="location" class="location" type="text" placeholder="Location">
+                <button class="fetch">Fetch</button>
+                <p class="location-error-mssg">Location can't be empty</p>
+            </form>
+            <div class="content-container">
+                <div class="initial-mssg">
+                    <p>Fill the Location to search wheather reports of your area.</p>
+                </div>
+                <div class="weather-data-container">
+                    <div class="temp-icon-container">
+                        <div class="icon-container">
+                            <img src="" alt="">
+                        </div>
+                        <div class="temperature-text">
+                            <div class="temp">
+                
+                            </div>
+                            <div class="text"></div>
+                        </div>
+                    </div>
+                    <div class="location-container">
+                        <p class="region"></p>
+                        <p class="country"></p>
+                    </div>
+                    <div class="aqi-container">
+                        <p>Air Quality</p>
+                        <div class="band">
+                            <b>Air Pollution Level:</b> <span></span>
+                        </div>
+                        <div class="mssg">
+                            <b>General Advise:</b> <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
